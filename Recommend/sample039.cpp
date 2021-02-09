@@ -9,18 +9,21 @@ int INF = 1001001001;
 
 int main()
 {
-    ll n, a, b;
-    cin >> n >> a >> b;
-    ll quotient = n / (a + b);
-    ll cnt = quotient * a;
-    if (n % (a + b) < a)
+    string a, b;
+    cin >> a >> b;
+    if (a < b)
     {
-        cnt += (n % (a + b));
+        rep(i, std::stoi(b))
+        {
+            cout << a;
+        }
     }
     else
     {
-        cnt += a;
+        rep(i, std::stoi(a))
+        {
+            cout << b;
+        }
     }
-    cout << cnt << endl;
     return 0;
 }
