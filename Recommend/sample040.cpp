@@ -9,18 +9,26 @@ int INF = 1001001001;
 
 int main()
 {
-    ll n, a, b;
-    cin >> n >> a >> b;
-    ll quotient = n / (a + b);
-    ll cnt = quotient * a;
-    if (n % (a + b) < a)
+    int n, k, m;
+    cin >> n >> k >> m;
+    int ave = n * m;
+    int sum = 0;
+    rep(i, n - 1)
     {
-        cnt += (n % (a + b));
+        int a;
+        cin >> a;
+        sum += a;
+    }
+
+    int ans = max(0, n * m - sum);
+
+    if (ans > k)
+    {
+        cout << -1 << endl;
     }
     else
     {
-        cnt += a;
+        cout << ans << endl;
     }
-    cout << cnt << endl;
     return 0;
 }

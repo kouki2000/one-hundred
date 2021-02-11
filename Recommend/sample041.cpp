@@ -9,17 +9,18 @@ int INF = 1001001001;
 
 int main()
 {
-    ll n, a, b;
-    cin >> n >> a >> b;
-    ll quotient = n / (a + b);
-    ll cnt = quotient * a;
-    if (n % (a + b) < a)
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    vi point;
+    int cnt = 0;
+    rep(i, s.size() - 2)
     {
-        cnt += (n % (a + b));
-    }
-    else
-    {
-        cnt += a;
+        if (s[i] == 'A' && s[i + 1] == 'B' && s[i + 2] == 'C')
+        {
+            cnt++;
+        }
     }
     cout << cnt << endl;
     return 0;

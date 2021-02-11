@@ -9,17 +9,13 @@ int INF = 1001001001;
 
 int main()
 {
-    ll n, a, b;
-    cin >> n >> a >> b;
-    ll quotient = n / (a + b);
-    ll cnt = quotient * a;
-    if (n % (a + b) < a)
+    int n, k;
+    cin >> n >> k;
+    int cnt = 0;
+    while (n > 0)
     {
-        cnt += (n % (a + b));
-    }
-    else
-    {
-        cnt += a;
+        cnt++;
+        n /= k;
     }
     cout << cnt << endl;
     return 0;
